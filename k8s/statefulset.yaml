@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: fsl-app
+  namespace: production
+spec:
+  serviceName: "fsl-service"
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fsl-app
+  template:
+    metadata:
+      labels:
+        app: fsl-app
+    spec:
+      containers:
+        - name: fsl-container
+          image: mrbhupendra1/fsl-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MY_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: MY_SECRET
+
