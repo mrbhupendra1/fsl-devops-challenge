@@ -12,5 +12,6 @@ app.listen(port, () => {
 });
 
 
+const a = 10; // unused variable (ye lint error hai)
 
 
