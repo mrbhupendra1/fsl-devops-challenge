@@ -11,3 +11,7 @@ app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
 
+
+const a = 10; // unused variable (ye lint error hai)
+
+
