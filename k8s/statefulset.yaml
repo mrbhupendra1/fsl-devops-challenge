@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: fsl-container
-          image: mrbhupendra1/fsl-app:latest
-          imagePullPolicy: IfNotPresent
+          image: fsl-app:latest          # ✅ Local image name (no prefix)
+          imagePullPolicy: Never         # ✅ Use local image only
           ports:
             - containerPort: 8080
           env:
