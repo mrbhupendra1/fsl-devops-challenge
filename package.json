@@ -1,0 +1,20 @@
+{
+  "name": "fsl-challenge",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo \"no build step\"",
+    "test": "echo \"No tests yet\" && exit 0",
+    "lint": "npx eslint . || true",
+    "prettier": "npx prettier --check . || true"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "prettier": "^2.8.8"
+  }
+}
+
